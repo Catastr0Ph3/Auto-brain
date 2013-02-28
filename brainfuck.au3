@@ -1,6 +1,6 @@
 ; brainfuck interpreter
 
-#include <Arrays.au3>
+#include <Array.au3>
 
 Func elementof($x, $array)
 	For $element In $array
@@ -14,6 +14,7 @@ EndFunc
 $maxArray=30000 ; Size of usable Array
 Dim $keywords[8]=["+","-","<",">",".",",","[","]"] ; All brainfuck keywords
 Dim $ValueArray[$maxArray] ; Array to work with
+Global $ptr = 0 ; Used as Pointer to $ValueArray
 Dim $JumpersOpen[1] ; Array for open jumping marks [
 Dim $JumpersClosed[1] ; Array for closing jumping marks ]
 
